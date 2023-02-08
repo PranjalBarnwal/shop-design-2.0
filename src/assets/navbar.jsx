@@ -1,28 +1,37 @@
 import React from 'react';
-import './Navbar.css'
+import './Navbar.css';
 import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import Logo from "../resources/Logo.png";
-import Logo2 from "../resources/Logo2.png";
-function Navbar() {
-  // let h=true;
-  // const[h,seth]=useState(true);
-  // window.addEventListener("scroll",function(){
-  //  if(window.scrollY==0) seth(false);
-  //  else seth(true);
-  //  console.log(h);
 
-  // })
+function Navbar() {
+  // const [toggle, setToggle] = useState(false);
+  // const toggleFunc = () => {
+  //   setToggle(!toggle);
+  // };
+  const menuBtn=document.querySelector(".menu-open");
+  const nav=document.querySelector(".NavMain");
+  menuBtn.addEventListener(onclick,function(){
+    nav.classList.toggle("active");
+  })
   return (
-  <nav className='nav'>
-    <div className='NavMain'>
-      <div className="logo nav-items">
+    <nav className='nav'>
+      <div className="logo">
         <img className='logoimg' src={Logo} alt="logo"  />
-        {/* <img className={`logo2img ${!h?'hide':''}`} src={Logo2} alt="logo"  /> */}
       </div>
+      <div className='burger'>
+      <div className='menu-open'><MenuIcon/></div>
+      <div className='menu-close'><CloseIcon/></div>
+      
+      </div>
+
+    <div className='NavMain active'>
+      <div classname="emptydiv nav-items "></div>
       <div className="middle-nav nav-items"><a href="#">HOME</a></div>
       <div className="middle-nav nav-items"><a href="">PRODUCTS</a></div>
       <div className="middle-nav nav-items"><a href="">ABOUT</a></div>
-      <div className="locate nav-items"><a href="">LOCATE OUR STORE</a></div>
+      <div className="locate nav-items"><a href="">LOCATE US</a></div>
     </div>
     </nav>
   )

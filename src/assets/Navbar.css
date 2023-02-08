@@ -1,45 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.nav{
-    background-color: rgb(34, 34, 34);
-    padding:1rem;
-    padding: 1px;
-    position:sticky;
-    top: 0px;
+.nav {
+  background-color: rgb(34, 34, 34);
+  padding: 1rem;
+  display: flex;
+  padding: 0px;
+  position: sticky;
+  top: 0px;
 }
-.NavMain{
-    display: flex;
-    text-align: center;
+.NavMain {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0rem 10rem;
+}
+.menu-open,.menu-close{
+    display: none;
+}
+.middle-nav {
+  margin: 0px 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: large;
+  opacity: 0.6;
+  color: white;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+a:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.logoimg {
+  margin: 0rem 2rem;
+  width: 250px;
+}
+
+@media all and (max-width: 800px) {
+  nav {
+    flex-direction: column;
     align-items: center;
-    
-}
-.logo{
-    flex:2;
-}
-.middle-nav{
-   margin:0px 20px;
-}
-.locate{
-    flex:2;
-}
-a{
-    text-decoration: none;
-    font-size: large;
-    opacity: 0.6;
-    color: white;
+    justify-content: center;
+  }
+
+  nav .NavMain {
+    position: fixed;
+    top: 80px;
+    /* left: -100%; */
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    transition: left 0.3s;
+  }
+  .active{
+    left: -100%;
+  }
+  .nav-items {
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-}
-a:hover{
-    opacity: 1;
-    transition: all 0.2s ease;
+    margin: 30px 0px;
+  }
+  a{
+    font-size: 20px;
+  }
+  .menu-open{
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+  .menu-open:hover{
     cursor: pointer;
-}
-.logoimg{
-    width: 300px;
+  }
 }
