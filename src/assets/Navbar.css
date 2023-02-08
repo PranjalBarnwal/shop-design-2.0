@@ -5,17 +5,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-nav{
+.nav{
     background-color: rgb(34, 34, 34);
     padding:1rem;
-    padding: 20px;
+    padding: 1px;
     position:sticky;
     top: 0px;
 }
 .NavMain{
     display: flex;
     text-align: center;
-    /* margin: 30px; */
+    align-items: center;
+    
 }
 .logo{
     flex:2;
@@ -38,4 +39,7 @@ a:hover{
     opacity: 1;
     transition: all 0.2s ease;
     cursor: pointer;
+}
+.logoimg{
+    width: 300px;
 }
