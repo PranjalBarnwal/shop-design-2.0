@@ -15,16 +15,20 @@
 }
 .NavMain {
   display: flex;
-
+  
   align-items: center;
   justify-content: space-evenly;
   margin: 0rem 10rem;
 }
 .menu-open,.menu-close{
-    display: none;
+  display: none;
 }
-.middle-nav {
+.nav-items {
   margin: 0px 20px;
+}
+.locate{
+  
+  justify-self:flex-end;
 }
 
 a {
@@ -53,16 +57,17 @@ a:hover {
   }
 
   nav .NavMain {
+    background-color: rgb(73, 75, 74);
     position: fixed;
     top: 80px;
-    /* left: -100%; */
+    left: -150%;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: inline-block;
     transition: left 0.3s;
   }
   .active{
-    left: -100%;
+    left: -50% !important;
   }
   .nav-items {
     text-align: center;
